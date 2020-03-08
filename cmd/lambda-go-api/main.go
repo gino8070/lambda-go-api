@@ -13,9 +13,19 @@ var ginLambda *ginadapter.GinLambda
 
 func init() {
 	r := gin.Default()
-	r.GET("/ping", func(c *gin.Context) {
+	r.GET("/example/ping", func(c *gin.Context) {
 		c.JSON(200, gin.H{
 			"message": "pong",
+		})
+	})
+	r.GET("/example/echo", func(c *gin.Context) {
+		c.JSON(200, gin.H{
+			"message": "echo",
+		})
+	})
+	r.GET("/example/fizz", func(c *gin.Context) {
+		c.JSON(200, gin.H{
+			"message": "buzz",
 		})
 	})
 

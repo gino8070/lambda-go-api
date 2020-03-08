@@ -14,3 +14,4 @@ Resources:
       CodeUri: bin/
       Handler: lambda-go-api
       Runtime: go1.x
+      AutoPublishAlias: live
